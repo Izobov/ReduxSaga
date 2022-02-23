@@ -1,6 +1,6 @@
 import { INCREASE_COUNT, DECREASE_COUNT } from "./constans";
 
-const counter = (state = {count: 0}, { type }) => {
+const counter = (state = { count: 0 }, { type }) => {
   switch (type) {
     case INCREASE_COUNT:
       return {
@@ -12,8 +12,9 @@ const counter = (state = {count: 0}, { type }) => {
         ...state,
         count: state.count - 1,
       };
-      default: return state
+    default:
+      return state;
   }
 };
 
-export default counter
+export default counter;

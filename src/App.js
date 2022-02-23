@@ -1,5 +1,5 @@
 import {useSelector, useDispatch} from "react-redux"
-import {increaseCount, decreaseCount} from "./redux/redusers/actions/actionCreator"
+import {increaseCount, decreaseCount, getLatestNews} from "./redux/redusers/actions/actionCreator"
 
 function App() {
   const count = useSelector(store => store?.counter?.count);
@@ -9,10 +9,13 @@ function App() {
       <button onClick={() => dispatch(increaseCount())}>
         Increase
       </button>
-      <h1>{count}</h1>
       <button onClick={() => dispatch(decreaseCount())}>
         Decrease
       </button>
+      <button onClick={() => dispatch(getLatestNews())}>
+        Get News
+      </button>
+      <h1>{count}</h1>
     </div>
   );
 }
